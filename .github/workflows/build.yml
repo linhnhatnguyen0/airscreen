@@ -22,6 +22,9 @@ jobs:
       - name: Build
         run: powershell -ExecutionPolicy Bypass -File scripts\build.ps1
 
+      - name: Check installer DLL list
+        run: powershell -ExecutionPolicy Bypass -File scripts\check-installer-dlls.ps1
+
       - name: Build installer
         shell: pwsh
         run: |
